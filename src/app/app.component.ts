@@ -18,13 +18,23 @@ export class AppComponent {
   year: number = this.currentTime.getFullYear();
 
   tasks: Task[] = [
-    new Task('Finish To Do List and notes'),
-    new Task('Redo Recipe box project'),
-    new Task('Complete Angular Tour of Heros Tutorial'),
-    new Task('Take notes on Thursday homework')
+    new Task('Finish To Do List and notes', 3),
+    new Task('Redo Recipe box project',2),
+    new Task('Complete Angular Tour of Heros Tutorial',2),
+    new Task('Take notes on Thursday homework',1)
   ];
   editTask() {
     alert("Let's edit this");
+  }
+
+  priorityColor(currentTask) {
+    if(currentTask.priority == 3) {
+      return 'bg-danger';
+    } else if (currentTask.priority == 2) {
+      return 'bg-warning';
+    } else {
+      return 'bg-info';
+    }
   }
 
 }
