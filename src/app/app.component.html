@@ -1,14 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome, {{userName}} to {{ title }}!
   </h1>
   <p>{{currentFocus}}</p>
 </div>
 <div class="">
   <h1>Today's date is {{month}}/{{day}}/{{year}}</h1>
 </div>
-<h2>Here are the items on your To Do List </h2>
-<ul>
-  <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}} <button (click)="editTask()">Edit this task</button></li>
-</ul>
+<div class="">
+  <form>
+    <input placeholder="Enter your name" type="text" name="user" [(ngModel)]="userName">
+  </form>
+</div>
+<div class="">
+  <h2>Here are the items on your To Do List </h2>
+  <ul>
+    <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}} <button (click)="editTask()">Edit this task</button></li>
+  </ul>
+</div>
