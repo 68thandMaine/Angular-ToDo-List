@@ -8,7 +8,7 @@
 <div class="">
   <h1>Today's date is {{month}}/{{day}}/{{year}}</h1>
 </div>
-<h2>Here are some links to help you start: </h2>
+<h2>Here are the items on your To Do List </h2>
 <ul>
-
+  <li *ngFor="let currentTask of tasks">{{currentTask.description}}</li>
 </ul>
