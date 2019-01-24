@@ -23,8 +23,13 @@ export class AppComponent {
     new Task('Complete Angular Tour of Heros Tutorial',2),
     new Task('Take notes on Thursday homework',1)
   ];
-  editTask() {
-    alert("Let's edit this");
+
+
+selectedTask: Task = null;
+
+// Whenever a suser clicks on the <li> element that has the click event binding on it, the selectedTask property changes to whcihever task was clicked on. It's sorta like a set method.
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
   }
 
   priorityColor(currentTask) {
