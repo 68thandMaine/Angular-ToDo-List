@@ -10,5 +10,5 @@
 </div>
 <h2>Here are the items on your To Do List </h2>
 <ul>
-  <li *ngFor="let currentTask of tasks">{{currentTask.description}}</li>
+  <li *ngFor="let currentTask of tasks">{{currentTask.description}} <button (click)="editTask()">Edit this task</button></li>
 </ul>

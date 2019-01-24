@@ -6,6 +6,8 @@ import { Task } from './models/task.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+// Code below this comment is reffered to as a class declaration
 export class AppComponent {
 
   title = 'The Angular To Do List';
@@ -21,4 +23,8 @@ export class AppComponent {
     new Task('Complete Angular Tour of Heros Tutorial'),
     new Task('Take notes on Thursday homework')
   ];
+  editTask() {
+    alert("Let's edit this");
+  }
+
 }
