@@ -23,11 +23,11 @@
   </ul>
 </div>
 <!-- edit task stuff -->
-<div class="">
+<div *ngIf="selectedTask">
   <h3>{{selectedTask.description}}</h3>
-  <p>Task complete? {{selectedTask.done}}</p>
+  <p>Task Complete: {{selectedTask.done}}</p>
   <h3>Edit Task</h3>
-  <label>Enter a new description for this task</label>
+  <label>Enter a new description for this task:</label>
   <input type="text" [(ngModel)]="selectedTask.description">
   <br>
   <label>Enter a task priority (1-3)</label>
@@ -35,4 +35,6 @@
   <input type="radio" [(ngModel)]="selectedTask.priority" value="1">1 (low priority) <br>
   <input type="radio" [(ngModel)]="selectedTask.priority" value="2">2 (medium priority) <br>
   <input type="radio" [(ngModel)]="selectedTask.priority" value="3">3 (high priority)
+  <br>
+  <button class="btn btn-primary"(click)=finishedEditing()>Are you done editing?</button>
 </div>
