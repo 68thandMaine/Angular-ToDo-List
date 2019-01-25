@@ -9,6 +9,7 @@
 <div class="">
   <h1>Today's date is {{month}}/{{day}}/{{year}}</h1>
 </div>
+
 <!-- form for name input -->
 <div class="">
   <form>
@@ -18,9 +19,8 @@
 <!-- list of to-do items -->
 <div class="">
   <h2>Here are the items on your To Do List </h2>
-  <ul>
-    <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}} <button (click)="editTask(currentTask)">Edit this task</button></li>
-  </ul>
+  <app-task-list [childTaskList]="masterTaskList"></app-task-list>
+
 </div>
 <!-- edit task stuff -->
 <div *ngIf="selectedTask">

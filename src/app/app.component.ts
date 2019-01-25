@@ -17,7 +17,7 @@ month: number = this.currentTime.getMonth() +1;
 day: number = this.currentTime.getDate();
 year: number = this.currentTime.getFullYear();
 
-tasks: Task[] = [
+masterTaskList: Task[] = [
   new Task('Finish To Do List and notes', 3),
   new Task('Redo Recipe box project',2),
   new Task('Complete Angular Tour of Heros Tutorial',2),
@@ -30,15 +30,15 @@ editTask(clickedTask) {
   this.selectedTask = clickedTask;
 }
 
-priorityColor(currentTask) {
-  if(currentTask.priority == 3) {
-    return 'bg-danger';
-  } else if (currentTask.priority == 2) {
-    return 'bg-warning';
-  } else {
-    return 'bg-info';
-  }
-}
+// priorityColor(currentTask) {
+//   if(currentTask.priority == 3) {
+//     return 'bg-danger';
+//   } else if (currentTask.priority == 2) {
+//     return 'bg-warning';
+//   } else {
+//     return 'bg-info';
+//   }
+// }
 
 finishedEditing() {
   this.selectedTask =null;
