@@ -26,6 +26,7 @@ masterTaskList: Task[] = [
 
 // Whenever a suser clicks on the <li> element that has the click event binding on it, the selectedTask property changes to whcihever task was clicked on. It's sorta like a set method.
 selectedTask: Task = null;
+
 editTask(clickedTask) {
   this.selectedTask = clickedTask;
 }

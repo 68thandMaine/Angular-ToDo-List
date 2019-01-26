@@ -19,7 +19,7 @@
 <!-- list of to-do items -->
 <div class="">
   <h2>Here are the items on your To Do List </h2>
-  <app-task-list [childTaskList]="masterTaskList"></app-task-list>
+  <app-task-list [childTaskList]="masterTaskList" (clickSender)="editTask($event)"></app-task-list>
 
 </div>
 <!-- edit task stuff -->
