@@ -10,6 +10,8 @@ export class TaskListComponent {
   @Input() childTaskList: Task[];
   @Output() clickSender = new EventEmitter();
 
+  filterByCompleteness: string = "incompleteTasks";
+
 editButtonClicked(taskToEdit: Task) {
   this.clickSender.emit(taskToEdit);
 }
@@ -24,4 +26,10 @@ priorityColor(currentTask) {
   }
 }
 
+onChange(optionFromMenu) {
+  this.filterByCompleteness = optionFromMenu;
+}
+toggleDone(clickedTask: Task, setCompleteness: boolean) {
+  clickedTask.done = setCompleteness;
+}
 }

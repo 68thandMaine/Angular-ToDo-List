@@ -24,4 +24,4 @@
 </div>
 <!-- edit task stuff -->
 <app-edit-task [childSelectedTask]="selectedTask" (clickedDone)="finishedEditing()"></app-edit-task>
-<app-new-task></app-new-task>
+<app-new-task (sendTask)="addTask($event)"></app-new-task>
